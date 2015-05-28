@@ -1,0 +1,16 @@
+body {
+  height: 75px;
+  width: 300px;
+}
+
+p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+}
+
+.count-container {
+  text-align: center;
+  font-size: 30px;
+  margin: -10% 0;
+}
