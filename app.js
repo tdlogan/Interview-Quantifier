@@ -4,12 +4,12 @@
 
 //Creating a new instance of the counter model
 var counter = new Counter({
-  interviewCount: 0;
+  interviewCount: 0
 });
 
 //Instantiating the view of the counter and referencing the counter model.
 var counterView = new CounterView({
-  model: counter;
+  model: counter
 });
 
 //Appending the view to the DOM.
