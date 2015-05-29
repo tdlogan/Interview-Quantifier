@@ -10,9 +10,9 @@ var Counter = Backbone.Model.extend({
     });
     //Get Data from storage
     chrome.storage.sync.get('interviewCount', function(count){
-      count = count || 0;
+      console.log(count.interviewCount);
+      count.interviewCount = count.interviewCount || 0;
       that.set({interviewCount: count.interviewCount});
-      console.log(count);
     });
   }
 });
