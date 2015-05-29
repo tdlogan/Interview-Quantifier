@@ -2,13 +2,14 @@
 var Counter = Backbone.Model.extend({
   //Attaching an event listener onto the counter model
   initialize: function() {
+    //Setting the context of this for each instance of the counter model
     var that = this;
     that.on('change', function(){
       chrome.storage.sync.set({'interviewCount': that.get('interviewCount')}, function(){
         console.log('Saved');
       });
     });
-    //Get Data from storage
+    //Getting data from chrome storage to be displayed on the view
     chrome.storage.sync.get('interviewCount', function(count){
       console.log(count.interviewCount);
       count.interviewCount = count.interviewCount || 0;
@@ -17,9 +18,4 @@ var Counter = Backbone.Model.extend({
   }
 });
 
-
-//Creating a new instance of the counter model
-var counter = new Counter({
-    interviewCount: 0
-});
 
